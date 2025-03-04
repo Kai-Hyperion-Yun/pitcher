@@ -328,8 +328,8 @@ export class SlideGenerator {
 
 
   private async updateThemeConfig() {
-    const config = await loadConfig("config.yaml");
-    const ai = initializeAI(config.google_api_key);
+    const config = await loadConfig();
+    const ai = initializeAI(config.GOOGLE_API_KEY);
     const screenplayTextSynopsis = this.screenplayData.coverage_report.comprehensive_synopsis;
     await updateThemeUsingAI(screenplayTextSynopsis, ai);
   }
@@ -423,8 +423,8 @@ export class SlideGenerator {
     const updatedComparables = await fetchComparablesDetails(comparableTitles);
 
 
-    const config = await loadConfig("config.yaml");
-    const ai = initializeAI(config.google_api_key);
+    const config = await loadConfig();
+    const ai = initializeAI(config.GOOGLE_API_KEY);
 
 
     // palette is an object with two properties: palette and description

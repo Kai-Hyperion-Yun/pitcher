@@ -3,16 +3,25 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('yamljs');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 
-const config = yaml.load('./config.yaml');
-const tmdbAPIKEY = config.TMDB_API_READ_ACCESS_TOKEN;
-const GETIMG_apiKey = config.GETIMG_API_KEY;
-const UNSPLASH_ACCESS_KEY = config.UNSPLASH_ACCESS_KEY;
-const UNSPLASH_SECRET_KEY = config.UNSPLASH_SECRET_KEY;
-const PEXELS_API_KEY = config.PEXELS_API_KEY;
+// Try to load from config.yaml as fallback for local development
+let config = {};
+try {
+  config = yaml.load('./config.yaml');
+} catch (error) {
+  console.warn('Could not load config.yaml, using only environment variables');
+}
+
+// Prioritize environment variables
+const tmdbAPIKEY = process.env.TMDB_API_READ_ACCESS_TOKEN || config.TMDB_API_READ_ACCESS_TOKEN;
+const GETIMG_apiKey = process.env.GETIMG_API_KEY || config.GETIMG_API_KEY;
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY || config.UNSPLASH_ACCESS_KEY;
+const UNSPLASH_SECRET_KEY = process.env.UNSPLASH_SECRET_KEY || config.UNSPLASH_SECRET_KEY;
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY || config.PEXELS_API_KEY;
 
 const cheerio = require('cheerio'); // This is used to load HTML and use jQuery syntax to traverse DOM
 
