@@ -1,0 +1,21 @@
+{
+  "name": "slidev-theme-screenplay",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.40.16",
+    "autoprefixer": "^10.4.20",
+    "codemirror-theme-vars": "^0.1.1",
+    "postcss": "^8.5.2",
+    "prism-theme-vars": "^0.2.4",
+    "tailwindcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.40.3"
+  }
+}

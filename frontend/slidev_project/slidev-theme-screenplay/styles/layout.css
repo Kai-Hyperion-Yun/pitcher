@@ -1,0 +1,41 @@
+/* Base styles */
+:root {
+    --slidev-theme-primary: v-bind('config.colors.primary');
+    --slidev-theme-secondary: v-bind('config.colors.secondary');
+    --slidev-theme-accent: v-bind('config.colors.accent');
+    --slidev-theme-background: v-bind('config.colors.background');
+  }
+  
+  /* Slide layouts */
+  .slidev-layout {
+    @apply px-14 py-10 text-[#181818];
+  }
+  
+  /* Title slide */
+  .slidev-layout.cover {
+    @apply h-full grid place-items-center;
+  }
+  
+  /* Regular slide */
+  .slidev-layout.default {
+    @apply pt-12;
+  }
+  
+  /* Style variations based on mood */
+  .mood-dramatic {
+    font-family: v-bind('config.fonts.dramatic.sans');
+    --slidev-theme-primary: #2B2B2B;
+    --slidev-theme-accent: #8B0000;
+  }
+  
+  .mood-lighthearted {
+    font-family: v-bind('config.fonts.lighthearted.sans');
+    --slidev-theme-primary: #2D5A27;
+    --slidev-theme-accent: #FF6B6B;
+  }
+  
+  .mood-thriller {
+    font-family: v-bind('config.fonts.thriller.sans');
+    --slidev-theme-primary: #1A1A1A;
+    --slidev-theme-accent: #DC143C;
+  }

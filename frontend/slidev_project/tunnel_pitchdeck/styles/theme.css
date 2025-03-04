@@ -1,0 +1,10 @@
+/* styles/theme.css */
+:root {
+    --theme-primary: #000000;
+    --theme-secondary: #333333;
+    --theme-text: #FFFFFF;
+    --theme-background: #111111;
+    --theme-font-family: 'Arial, sans-serif';
+    --theme-font-size: 16px;
+    --theme-font-weight: normal;
+  }

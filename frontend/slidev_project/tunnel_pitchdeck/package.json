@@ -1,0 +1,44 @@
+{
+  "name": "tunnel_pitchdeck",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "slidev": "npx @slidev/cli slides.md",
+    "build": "tsc && cp config.yaml dist/ && npx @slidev/cli build",
+    "dev": "npx @slidev/cli --open",
+    "export": "npx @slidev/cli export",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@slidev/cli": "^51.3.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "@types/node": "^22.13.2",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
+    "next": "^15.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.13"
+  },
+  "version": "1.0.0",
+  "description": "To start the slide show:",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "overrides": {
+    "esbuild": {
+      "version": "0.25.0"
+    }
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/multiparty": "^4.2.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4"
+  }
+}

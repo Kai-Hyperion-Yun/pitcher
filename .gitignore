@@ -1,0 +1,18 @@
+# Ignore node_modules in all folders
+node_modules
+**/node_modules
+
+# Ignore build output directories
+dist
+
+# Ignore local environment variable files
+.env
+.env.local
+.env.*.local
+
+# Ignore configuration files containing secrets (if applicable)
+# For example, if your config.yaml contains API keys, ignore it:
+config.yaml
+
+# Optionally ignore log files and temporary files
+*.log
