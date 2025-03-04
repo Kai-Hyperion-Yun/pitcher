@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "slidev": "npx @slidev/cli slides.md",
-    "build": "tsc && cp config.yaml dist/ && npx @slidev/cli build",
+    "build": "tsc && npx @slidev/cli build",
     "dev": "npx @slidev/cli --open",
     "export": "npx @slidev/cli export",
     "start": "node dist/main.js"
